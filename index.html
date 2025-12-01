@@ -1,72 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KuZi | Home</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KuZi — Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-  <!-- Header -->
+  <!-- NAV -->
   <header>
-    <nav>
-      <ul class="nav-left">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
+    <nav class="nav-bar">
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
       </ul>
 
-      <ul>
-        <h1 class="logo">KuZi</h1>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <div class="brand">KuZi</div>
+
+      <ul class="nav-list nav-right">
+        <li class="hideOnMobile"><a href="projects.html" class="nav-link">Projects</a></li>
+        <li class="hideOnMobile"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- Sidebar (mobile) -->
+    <aside id="mobileMenu" class="sidebar" aria-hidden="true">
+      <button class="close-btn" id="navClose" aria-label="Close menu">✖</button>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="sidebar-link">Home</a>
+        <a href="about.html" class="sidebar-link">About</a>
+        <a href="projects.html" class="sidebar-link">Projects</a>
+        <a href="contact.html" class="sidebar-link">Contact</a>
+      </nav>
+    </aside>
   </header>
 
-  <!-- Slideshow -->
-  <section class="slideshow-container">
-    <div class="slides fade">
-      <img src="images/pexels-divinetechygirl-1181325.jpg" alt="Slide 1">
-      <div class="caption">Welcome to KuZi — My World of Code</div>
-      
-    </div>
+  <!-- HERO / SLIDES -->
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title"><span class="accent">KuZi</span></h1>
+        <p class="hero-sub">
+          Developer & Designer — building elegant, performant web experiences with a
+          dark-tech aesthetic. I craft front-end interfaces, back-end logic and user-centered products.
+        </p>
+        <div class="hero-cta">
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+        </div>
+      </div>
 
-    <div class="slides fade">
-      <img src="images/pexels-jakubzerdzicki-34212916.jpg" alt="Slide 2">
-      <div class="caption">Building Creative & Functional Projects</div>
-    </div>
+      <div class="hero-slideshow" aria-hidden="true">
+        <div class="slide active"><img src="images/pexels-divinetechygirl-1181325.jpg" alt="Project preview 1"></div>
+        <div class="slide"><img src="images/hero-2.jpg" alt="Project preview 2"></div>
+        <div class="slide"><img src="images/hero-3.jpg" alt="Project preview 3"></div>
+      </div>
+    </section>
 
-    <div class="slides fade">
-      <img src="images/pexels-darlene-alderson-4385547.jpg" alt="Slide 3">
-      <div class="caption">Innovate. Design. Inspire.</div>
-    </div>
-  </section>
+    <!-- ABOUT PREVIEW -->
+    <section class="preview about-preview">
+      <div class="container">
+        <div class="split">
+          <div class="card dark-card">
+            <h2>About Me</h2>
+            <p>
+              I'm a passionate software developer focused on creating clean interfaces and reliable systems.
+              I love design systems, UX-driven interfaces and shipping projects that solve real problems.
+            </p>
+            <a href="about.html" class="btn btn-outline">Learn more</a>
+          </div>
 
-  <!-- Hero / Introduction Section -->
-  <section class="intro">
-    <div class="intro-content">
-      <h2><span class="highlight">KuZi</span></h2>
-      <p>
-        Driven by creativity, innovation, and the desire to build meaningful digital experiences. 
-        His work reflects a seamless blend of aesthetic design and technical precision, 
-        spanning from intuitive front-end interfaces to efficient back-end systems.Over the years, 
-        he has dedicated himself to transforming ideas into functional, 
-        user-centered solutions — merging technology with creativity to deliver impactful results.
-        Explore his portfolio to discover a journey of growth, creativity, and innovation — 
-        and feel free to connect if you’d like to collaborate, create, or simply say hello.
-      </p>
-      <p>
-        Explore my work, learn about my journey, and get in touch if you’d like to collaborate or just say hello.
-      </p>
-      <a href="projects.html" class="btn">View My Work</a>
-    </div>
-  </section>
+          <div class="card image-card">
+            <img src="images/me-portrait.jpg" alt="KuZi portrait">
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 KuZi Portfolio | Designed by Kuzivakwashe Kanyemba</p>
-    <h1 class="logofooter">KuZi</h1>
-  </footer>
+    <!-- PROJECTS PREVIEW -->
+    <section class="preview projects-preview">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-sub">A few highlights — click through to see details.</p>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <img src="images/project-1.jpg" alt="Project 1">
+            <div class="project-body">
+              <h3>Project One</h3>
+              <p>Web app — inventory & shipping dashboard with real-time updates.</p>
+              <a href="projects.html" class="project-link">View project →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/project-2.jpg" alt="Project 2">
+            <div class="project-body">
+              <h3>Project Two</h3>
+              <p>Progressive web app for student planner and notifications.</p>
+              <a href="projects.html" class="project-link">View project →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="images/project-3.jpg" alt="Project 3">
+            <div class="project-body">
+              <h3>Project Three</h3>
+              <p>E-commerce integrations and listings optimizations for marketplaces.</p>
+              <a href="projects.html" class="project-link">View project →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand small">KuZi</div>
+          <p class="muted">Designed & built by Kuzivakwashe Kanyemba</p>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <p class="muted">© <span id="year"></span> KuZi — All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
 
   <script src="js/script.js"></script>
 </body>
