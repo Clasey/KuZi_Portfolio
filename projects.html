@@ -1,61 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KuZi | Projects</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KuZi — Projects</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <h1 class="logo">KuZi</h1>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+    <nav class="nav-bar">
+      <button class="nav-toggle" id="navToggle3" aria-label="Open menu">☰</button>
+
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <div class="brand">KuZi</div>
+
+      <ul class="nav-list nav-right">
+        <li class="hideOnMobile"><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li class="hideOnMobile"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
+
+    <aside id="mobileMenu3" class="sidebar" aria-hidden="true">
+      <button class="close-btn" id="navClose3" aria-label="Close menu">✖</button>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="sidebar-link">Home</a>
+        <a href="about.html" class="sidebar-link">About</a>
+        <a href="projects.html" class="sidebar-link">Projects</a>
+        <a href="contact.html" class="sidebar-link">Contact</a>
+      </nav>
+    </aside>
   </header>
 
-  <section class="projects">
-    <h2>My Projects</h2>
-    <p class="subtext">A glimpse into the things I’ve built and explored.</p>
-
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="images/massimo's hatchery.jpg" alt="Project 1">
-        <h3>Massimo's Hatchery</h3>
-        <p>A smart user friendly management system that simplifies poultry hatchery operations.</p>
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Projects</h1>
+        <p class="lead">Work I've shipped — apps, tools, and experiments.</p>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="images/CMSC (1).png" alt="Project 2">
-        <h3>CMCS Web App</h3>
-        <p>A .NET Core MVC system for managing lecturer claims with secure login and approval workflows.</p>
+    <section class="content container">
+      <div class="project-grid large">
+        <!-- Repeat cards for each project -->
+        <article class="project-card full">
+          <div class="project-media">
+            <img src="images/project-1.jpg" alt="Project 1">
+          </div>
+          <div class="project-body">
+            <h3>Inventory Dashboard</h3>
+            <p>Full-stack dashboard for tracking stock, shipments and analytics. Role: Front-end & API integration.</p>
+            <p class="muted small">Tech: React • Node • PostgreSQL</p>
+            <a href="#" class="project-cta">Case study →</a>
+          </div>
+        </article>
+
+        <article class="project-card full">
+          <div class="project-media">
+            <img src="images/project-2.jpg" alt="Project 2">
+          </div>
+          <div class="project-body">
+            <h3>Student Planner PWA</h3>
+            <p>PWA to manage classes, reminders and offline access. Role: Lead developer.</p>
+            <p class="muted small">Tech: PWA • Service Workers • IndexedDB</p>
+            <a href="#" class="project-cta">Case study →</a>
+          </div>
+        </article>
+
+        <article class="project-card full">
+          <div class="project-media">
+            <img src="images/project-3.jpg" alt="Project 3">
+          </div>
+          <div class="project-body">
+            <h3>Marketplace Optimizer</h3>
+            <p>Tools and scripts to improve listings and conversions on marketplaces.</p>
+            <p class="muted small">Tech: Python • Analytics</p>
+            <a href="#" class="project-cta">Case study →</a>
+          </div>
+        </article>
       </div>
+    </section>
 
-      <div class="project-card">
-        <img src="images/reecha logo.jpg" alt="Project 3">
-        <a href="https://clasey.github.io/Reecha/" class="btn">View Project</a>
-        <h3>REECHA Inc.</h3>
-        <p>REECHA Incorporated is a South African professional services firm established in 2016 with 
-          the vision of providing high-quality auditing, advisory, and consulting services. 
-          The firm is driven by a team of young black professionals who are committed to excellence, integrity, 
-          and ethical leadership in every engagement.</p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand small">KuZi</div>
+          <p class="muted">Designed & built by Kuzivakwashe Kanyemba</p>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <p class="muted">© <span id="year3"></span> KuZi — All rights reserved.</p>
       </div>
+    </footer>
+  </main>
 
-      <div class="project-card">
-        <img src="images/project4.jpg" alt="Project 4">
-        <h3>MyEdu Mobile Prototype</h3>
-        <p>A mobile UI concept to assist students with schedules, reminders, and performance tracking.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 KuZi Portfolio | Designed by Kuzivakwashe Kanyemba</p>
-  </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
