@@ -1,55 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KuZi | About</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KuZi — About</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- NAV (same structure as index) -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <h1 class="logo">KuZi</h1>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+    <nav class="nav-bar">
+      <button class="nav-toggle" id="navToggle2" aria-label="Open menu">☰</button>
+
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+      </ul>
+
+      <div class="brand">KuZi</div>
+
+      <ul class="nav-list nav-right">
+        <li class="hideOnMobile"><a href="projects.html" class="nav-link">Projects</a></li>
+        <li class="hideOnMobile"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
+
+    <aside id="mobileMenu2" class="sidebar" aria-hidden="true">
+      <button class="close-btn" id="navClose2" aria-label="Close menu">✖</button>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="sidebar-link">Home</a>
+        <a href="about.html" class="sidebar-link">About</a>
+        <a href="projects.html" class="sidebar-link">Projects</a>
+        <a href="contact.html" class="sidebar-link">Contact</a>
+      </nav>
+    </aside>
   </header>
 
-  <section class="about">
-    <div class="about-content">
-      <img src="images/myimage.jpg" alt="Profile Image">
-      <div class="text">
-        <p>
-          <span class="highlight">Kuzivakwashe Kanyemba</span> — A developer create clean, elegant, and purposeful digital experiences.
-        </p>
-        <p>
-          From an early age, Kuzivakwashe Kanyemba has always been curious about how things work. What began as fixing broken hardware 
-          at home evolved into a lifelong passion for technology and problem-solving. That same curiosity now drives his journey as a 
-          developer and designer — someone who builds with both functionality and creativity in mind.
-          He has worked on projects that reflect real-world collaboration and innovation, such as Massimo’s Hatchery, 
-          the Contract Monthly Claim System (CMCS) for lecturers, and a banking application built on the MERN stack. 
-          Proficient in C#, .NET, HTML, CSS, and databases, Kuzivakwashe also explores modern frameworks like React 
-          to deliver full-stack solutions that balance logic and design.
-          His approach to development is user-focused and artistic, guided by the belief that learning has no limits. 
-          What motivates him most is seeing how others have faced challenges, grown, and succeeded — a reminder that he too can overcome any obstacle.
-          Kuzivakwashe’s long-term vision is to build a foundation that offers IT services on a global scale, 
-          inspired by the impact of giants like Microsoft and Amazon. Above all, he wants visitors to his 
-          portfolio to feel connected, to see the passion behind every project, and to recognize the mindset of an open-minded, 
-            killed developer ready to make an impact.
-        </p>
-        <p>
-          Beyond coding, I’m driven by continuous learning and innovation — always exploring ways to turn ideas into impactful solutions.
-        </p>
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>About Me</h1>
+        <p class="lead">Developer • Problem-solver • Lifelong learner</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <p>© 2025 KuZi Portfolio | Designed by Kuzivakwashe Kanyemba</p>
-  </footer>
+    <section class="content container">
+      <div class="split">
+        <div class="text">
+          <h2>Hi — I'm Kuzivakwashe</h2>
+          <p>
+            I build practical, beautiful software. I studied Computer Science and currently work
+            in logistics & IT — I bridge hardware, networking and software to make things work.
+            My focus is on front-end experience, responsive design, and maintainable code.
+          </p>
+
+          <h3>Skills</h3>
+          <ul class="skills">
+            <li>HTML / CSS / JavaScript</li>
+            <li>C# / .NET / WPF</li>
+            <li>React / REST APIs</li>
+            <li>Database design (Oracle, SQL)</li>
+            <li>UX & accessibility basics</li>
+          </ul>
+
+          <h3>Work Approach</h3>
+          <p>
+            I follow iterative design: prototype, test, ship. I prefer clear visual hierarchy,
+            accessible layouts, and performance-minded implementations.
+          </p>
+
+          <a href="projects.html" class="btn btn-primary">See my work</a>
+        </div>
+
+        <aside class="card dark-card">
+          <img src="images/me-portrait.jpg" alt="KuZi portrait">
+          <div class="card-body">
+            <h4>Contact</h4>
+            <p class="muted">Johannesburg, South Africa</p>
+            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <a href="contact.html" class="btn btn-ghost">Message me</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand small">KuZi</div>
+          <p class="muted">Designed & built by Kuzivakwashe Kanyemba</p>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <p class="muted">© <span id="year2"></span> KuZi — All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
