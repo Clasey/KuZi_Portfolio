@@ -1,68 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KuZi | Contact</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- Font Awesome CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KuZi — Contact</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <h1 class="logo">KuZi</h1>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+    <nav class="nav-bar">
+      <button class="nav-toggle" id="navToggle4" aria-label="Open menu">☰</button>
+
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+      </ul>
+
+      <div class="brand">KuZi</div>
+
+      <ul class="nav-list nav-right">
+        <li class="hideOnMobile"><a href="projects.html" class="nav-link">Projects</a></li>
+        <li class="hideOnMobile"><a href="contact.html" class="nav-link active">Contact</a></li>
       </ul>
     </nav>
+
+    <aside id="mobileMenu4" class="sidebar" aria-hidden="true">
+      <button class="close-btn" id="navClose4" aria-label="Close menu">✖</button>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="sidebar-link">Home</a>
+        <a href="about.html" class="sidebar-link">About</a>
+        <a href="projects.html" class="sidebar-link">Projects</a>
+        <a href="contact.html" class="sidebar-link">Contact</a>
+      </nav>
+    </aside>
   </header>
 
-  <section class="contact">
-    <h2>Get in Touch</h2>
-    <p>If you’d like to collaborate, have questions, or simply want to say hi — I’d love to hear from you.</p>
-
-    <div class="contact-container">
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="6" placeholder="Your Message..." required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-
-      <div class="contact-info">
-        <div class="contact-info">
-          <h3>Contact Info</h3>
-          <p>
-              <i class="fas fa-envelope"></i>
-              <a href="mailto:claseyk@gmail.com">claseyk@gmail.com</a>
-          </p>
-          <p>
-            <i class="fab fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/kuzivakwashe" target="_blank">linkedin.com/in/kuzivakwashe</a>
-          </p>
-          <p>
-            <i class="fab fa-github"></i>
-            <a href="https://github.com/Clasey" target="_blank">github.com/Clasey</a>
-          </p>
-          <p>
-            <i class="fas fa-map-marker-alt"></i>
-            <a href="https://www.google.com/search?q=johannesburg&oq=johannesburg&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyCggBEC4YsQMYgAQyDAgCECMYJxiABBiKBTIMCAMQIxgnGIAEGIoFMgoIBBAAGLEDGIAEMhAIBRAuGK8BGMcBGLEDGIAEMhAIBhAuGK8BGMcBGLEDGIAEMgcIBxAAGIAEMg0ICBAAGIMBGLEDGIAEMgoICRAAGLEDGIAE0gEIMjc3NWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8" target="_blank">Johannesburg, South Africa</a>
-          </p>
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1>Contact</h1>
+        <p class="lead">Want to collaborate or need help? Send a message.</p>
       </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <p>© 2025 KuZi Portfolio | Designed by Kuzivakwashe Kanyemba</p>
-  </footer>
+    <section class="content container">
+      <div class="split">
+        <form class="contact-form" action="#" method="post" id="contactForm">
+          <label>
+            <span>Name</span>
+            <input name="name" type="text" required placeholder="Your name">
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input name="email" type="email" required placeholder="you@domain.com">
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <a href="mailto:youremail@example.com" class="btn btn-ghost">Or email directly</a>
+          </div>
+        </form>
+
+        <aside class="card dark-card contact-info">
+          <h3>Other ways to reach me</h3>
+          <p class="muted">Johannesburg, South Africa</p>
+          <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+          <p>LinkedIn: <a href="#" target="_blank">Your profile</a></p>
+          <p>GitHub: <a href="#" target="_blank">github.com/username</a></p>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand small">KuZi</div>
+          <p class="muted">Designed & built by Kuzivakwashe Kanyemba</p>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <p class="muted">© <span id="year4"></span> KuZi — All rights reserved.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
