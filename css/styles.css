@@ -125,9 +125,19 @@ body{
 
 /* HERO */
 .hero{
+  align-items: center;
   position:relative;
-  padding: 60px 20px 120px;
+  padding: 60px 20px 100px;
   overflow:hidden;
+}
+
+.hero-line {
+  width: 100%;           /* line length */
+  height: 1px;           /* line thickness */
+  background: var(--accent);
+  border: none;
+  margin: 12px 0;        /* spacing above & below */
+  border-radius: 2px;    /* optional rounded edges */
 }
 
 .hero-inner{
@@ -141,14 +151,19 @@ body{
 }
 
 .hero-title{
+  margin-left: 33%;
   font-size:42px;
   margin-bottom:6px;
-  font-weight:800;
+  font-weight:650;
   color:#fff;
 }
 .hero-sub{
-  color:var(--muted);
+  margin-left: 20%;
+  color: #fff;
   max-width:760px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 .accent{
@@ -159,6 +174,10 @@ body{
 }
 
 /* CTA */
+.hero-cta{
+  margin-left: 37%;
+}
+
 .btn{
   display:inline-block;
   text-decoration:none;
